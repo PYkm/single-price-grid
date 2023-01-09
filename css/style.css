@@ -1,2 +1,134 @@
-.attribution { font-size: 11px; text-align: center; }
+:root {
+  --default-font: 400 1em/1.5 'Karla', 'Verdana', sans-serif;
+  --main-bg-color: hsl(204, 43%, 93%);
+  --white-bg-color: white;
+  --emphasis-color: hsl(71, 73%, 54%);
+  --join-community-font-color: hsl(218, 22%, 67%);
+  --subscription-bg-color: hsl(179, 62%, 43%);
+  --why-us-bg-color: hsl(179, 47%, 52%);
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  align-items: center;
+  background: var(--main-bg-color);
+  color: var(--white-bg-color);
+  display: flex;
+  flex-direction: column;
+  font: var(--default-font);
+  justify-content: center;
+  min-height: 100vh;
+  padding: 4em;
+}
+
+main {
+  border-radius: 0.5em;
+  display: grid;
+  /* margin: 4em auto; */
+  max-width: 44em;
+  overflow: hidden;
+  width: 86vw;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1.5em 1.5em 1.8em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h2,
+.emphasis,
+.subscription > a {
+  font-weight: 700;
+}
+
+main,
+.subscription > a {
+box-shadow: 0 0 1em 0 hsla(218, 22%, 67%, 0.3);
+}
+
+.join_community {
+  background: var(--white-bg-color);
+  color: var(--join-community-font-color);
+  line-height: 1.8;
+}
+
+.join_community h2 {
+  color: var(--subscription-bg-color);
+}
+
+.join_community h2,
+.join_community > .emphasis,
+.subscription > h2,
+.why_us > h2 {
+  margin-bottom: 0.5em;
+}
+
+.join_community > .emphasis {
+  color: var(--emphasis-color);
+}
+
+.subscription {
+  background: var(--subscription-bg-color);
+}
+
+.subscription p > * {
+  vertical-align: middle;
+}
+
+.subscription p > strong {
+  font-size: 2em;
+  margin-right: 0.3em;
+}
+
+.subscription > a {
+  background-color: var(--emphasis-color);
+  border-radius: 0.5em;
+  color: var(--white-bg-color);
+  display: block;
+  margin-top: 2em;
+  padding: 0.8em 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.why_us {
+  background: var(--why-us-bg-color);
+}
+
+.subscription p > span,
+ul {
+  opacity: 0.6;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--join-community-font-color);}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* large screen */
+@media (min-width: 44em) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 3em;
+  }
+
+  .join_community {
+    grid-column: 1 / 3;
+  }
+
+  .why_us {
+    background: var(--why-us-bg-color);
+  }
+}
