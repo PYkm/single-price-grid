@@ -27,7 +27,6 @@ body {
 main {
   border-radius: 0.5em;
   display: grid;
-  /* margin: 4em auto; */
   max-width: 44em;
   overflow: hidden;
   width: 86vw;
@@ -52,7 +51,7 @@ h2,
 
 main,
 .subscription > a {
-box-shadow: 0 0 1em 0 hsla(218, 22%, 67%, 0.3);
+  box-shadow: 0 0 1em 0 hsla(218, 22%, 67%, 0.3);
 }
 
 .join_community {
